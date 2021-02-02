@@ -71,11 +71,14 @@ function draw() {
 function keyPressed(){
 	if(keyCode==DOWN_ARROW){
 		Matter.Body.setStatic(packageBody,false);
+		keyCode-0;
 	}
 	if(keyCode==LEFT_ARROW){
-		Matter.body.setPosition(packageBody,{x:packageBody.position.x-5,y:packageBody.position.y})
+		Matter.Body.setPosition(packageBody,{x:packageBody.position.x-5,y:packageBody.position.y})
+		keyCode=0;
 	}
 	if(keyCode==RIGHT_ARROW){
-		Matter.body.setPosition(packageBody,{x:packageBody.position.x+5,y:packageBody.position.y})
+		Matter.Body.setPosition(packageBody,{x:packageBody.position.x+5,y:packageBody.position.y})
+		keyCode-0;
 	}
 }
